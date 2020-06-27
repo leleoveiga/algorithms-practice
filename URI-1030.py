@@ -8,13 +8,13 @@ for i in range(n):
     eliminados = 0
     j = x[1]-1
     while eliminados < x[0]-1:
-        print(j)
-        print(lista)
+        #print(j)
+        #print(lista)
         
         del lista[j]
         eliminados += 1
         passadas = 0
         j += x[1]-1
-        while j > len(lista)-1:
-            j -= len(lista)
+        if j > len(lista)-1:
+            j = j % len(lista)
     print("Case %d: %d" % (i+1, lista[0]))
